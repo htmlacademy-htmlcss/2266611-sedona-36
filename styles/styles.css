@@ -73,6 +73,7 @@ body {
 /*-- Кнопки -- */
 
 .button {
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -236,6 +237,7 @@ body {
 
 .subscribtion-main {
   background: url(../images/subscribe-background.jpg) no-repeat;
+  background-size: cover;
   background-color: #756157;
   color: #ffffff;
 }
@@ -290,8 +292,8 @@ body {
 /*-- Фильтрация отелей -- */
 
 .hotel-filter {
-  min-height: 412px;
   background: url(../images/filter-background.jpg) no-repeat;
+  background-size: cover;
   background-color: #68A2CA;
   color: #ffffff;
 }
