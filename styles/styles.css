@@ -155,8 +155,8 @@ body {
 .hero {
   min-height: 485px;
   text-align: center;
+  background-color: #c5dcea;
   background: url(../images/hero-divider.svg) no-repeat 0 100%, url(../images/hero-background.jpg) no-repeat;
-  background-color: rgba(131, 179, 211, 0.2);
 }
 
 .welcome-text {
@@ -236,9 +236,9 @@ body {
 }
 
 .subscribtion-main {
+  background-color: #aecbde;
   background: url(../images/subscribe-background.jpg) no-repeat;
   background-size: cover;
-  background-color: #756157;
   color: #ffffff;
 }
 
@@ -292,10 +292,10 @@ body {
 /*-- Фильтрация отелей -- */
 
 .hotel-filter {
+  color: #ffffff;
+  background-color: #aecbde;
   background: url(../images/filter-background.jpg) no-repeat;
   background-size: cover;
-  background-color: #68A2CA;
-  color: #ffffff;
 }
 
 .hotel-filter-title {
