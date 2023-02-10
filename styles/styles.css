@@ -256,6 +256,23 @@ body {
   padding-top: 64px;
 }
 
+.advantages .info-title {
+  margin-bottom: 25px;
+}
+
+.advantages .info-desc {
+  margin-bottom: 69px;
+}
+
+.services .info-desc {
+  margin-bottom: 64px;
+}
+
+.advantages-image {
+  height: 100%;
+  object-fit: cover;
+}
+
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
@@ -266,46 +283,42 @@ body {
 
 .services-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.advantages .info-title {
-  margin-bottom: 25px;
-}
-
-.services .info-desc {
-  margin-bottom: 64px;
-}
-
-.advantages .info-desc {
-  margin-bottom: 69px;
-}
-
-.advantages-image {
-  vertical-align: middle;
-}
-
-.advantages-item:first-child, .advantages-item:last-child {
+.advantages-illustrated-item {
   display: flex;
-}
-
-.advantages-item {
-  flex-grow: 1;
   background-color: #82B3D3;
 }
 
-.advantages-item:nth-child(even) {
+.advantages-illustrated-item:last-child {
+  flex-direction: row-reverse;
+}
+
+.advantages-wrap {
+  box-sizing: border-box;
+  width: 400px;
+  padding: 102px 85px;
+}
+
+.advantages-item {
+  box-sizing: border-box;
+  width: 400px;
+  padding: 112px 85px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.alternate-item {
+.advantages-item:nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
 .services-item {
-  flex-grow: 1;
+  box-sizing: border-box;
+  width: 400px;
+  padding: 183px 85px 81px;
 }
 
 .services-item:first-child {
@@ -324,27 +337,6 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.advantages-wrap, .services-wrap {
-  width: 230px;
-  margin: 0 auto;
-}
-
-.advantages-wrap {
-  margin-top: 113px;
-  margin-bottom: 113px;
-}
-
-.services-wrap {
-  margin-top: 183px;
-  margin-bottom: 81px;
-}
-
-.advantages-item:first-child .advantages-wrap,
-.advantages-item:last-child .advantages-wrap {
-  margin-top: 101px;
-  margin-bottom: 102px;
-}
-
 .advantages-title {
   position: relative;
   margin: 0 auto;
@@ -357,6 +349,10 @@ body {
   margin-bottom: 30px;
 }
 
+.advantages-desc, .services-desc {
+  margin: 0;
+}
+
 .advantages-title::after {
   position: absolute;
   top: 86px;
@@ -367,18 +363,12 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.advantages-item:first-child .advantages-title::after,
-.advantages-item:last-child .advantages-title::after {
+.advantages-illustrated-item .advantages-title::after,
+.advantages-illustrated-item .advantages-title::after {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.advantages-item:last-child {
-  flex-direction: row-reverse;
-}
 
-.advantages-desc, .services-desc {
-  margin: 0;
-}
 
 /*-- Поиск гостиницы -- */
 
