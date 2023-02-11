@@ -232,10 +232,22 @@ body {
 /*-- Заглавный блок -- */
 
 .hero {
+  position: relative;
   text-align: center;
   background-color: #c5dcea;
-  background: url(../images/hero-divider.svg) no-repeat 0 100%, url(../images/hero-background.jpg) no-repeat;
+  background: url(../images/hero-background.jpg) no-repeat;
+  background-size: cover;
   padding: 51px 0 82px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: url(../images/hero-divider.svg) no-repeat;
+  height: 57px;
+  width: 100%;
 }
 
 .welcome-text {
