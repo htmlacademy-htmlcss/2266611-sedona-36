@@ -430,6 +430,7 @@ body {
 
 .subscription-form {
   display: flex;
+  justify-content: center;
   max-width: 684px;
   margin-right: auto;
   margin-left: auto;
