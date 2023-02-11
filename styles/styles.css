@@ -363,7 +363,6 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.advantages-illustrated-item .advantages-title::after,
 .advantages-illustrated-item .advantages-title::after {
   background-color: rgba(255, 255, 255, 0.3);
 }
@@ -495,17 +494,17 @@ body {
 /*-- Фильтрация отелей -- */
 
 .hotel-filter {
-  min-height: 412px;
   color: #ffffff;
   background-color: #aecbde;
   background: url(../images/filter-background.jpg) no-repeat;
   background-size: cover;
+  box-sizing: border-box;
+  padding: 35px 0 70px;
 }
 
 .main-inner-header {
   width: 1060px;
   margin: 0 auto;
-  padding-top: 35px;
   margin-bottom: 40px;
 }
 
@@ -553,6 +552,7 @@ body {
 .hotel-filter-form {
   display: flex;
   width: 1060px;
+  min-height: 160px;
   margin: 0 auto;
   gap: 140px;
 }
@@ -581,6 +581,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   margin-bottom: 32px;
+  padding: 0;
 }
 
 .hotel-filter-item:not(:last-child) {
@@ -594,6 +595,7 @@ body {
 }
 
 .control {
+  display: block;
   font-size: 18px;
   line-height: 23px;
   padding-left: 36px;
@@ -608,6 +610,7 @@ body {
 
 .range-input {
   width: 143px;
+  height: 48px;
   font: inherit;
   font-weight: 700;
   font-size: 18px;
@@ -638,7 +641,9 @@ body {
 }
 
 .hotel-filter-buttons {
-  padding-top: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .hotel-filter-buttons .button {
@@ -698,6 +703,7 @@ body {
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .catalog-view-item:not(:last-child) {
@@ -829,6 +835,7 @@ body {
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .pagination-item:not(:last-child) {
