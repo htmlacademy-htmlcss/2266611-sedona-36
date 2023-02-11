@@ -791,6 +791,9 @@ body {
   color: #333333;
 }
 
+.hotel-price {
+  text-align: end;
+}
 
 /*-- Звезды -- */
 
