@@ -148,6 +148,7 @@ body {
 
 .navigation-logo, .logo-main {
   position: absolute;
+  z-index: 2;
 }
 
 .navigation {
