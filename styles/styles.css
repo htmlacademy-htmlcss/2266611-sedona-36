@@ -532,7 +532,7 @@ body {
 .main-inner-header {
   width: 1060px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .hotel-filter-title {
@@ -540,7 +540,6 @@ body {
   font-size: 60px;
   line-height: 78px;
   margin: 0;
-  margin-bottom: 8px;
 }
 
 .breadcrumbs {
@@ -553,22 +552,27 @@ body {
   line-height: 21px;
 }
 
-.breadcrumbs-link.home {
+.breadcrumbs-link {
   display: block;
-  width: 12px;
-  height: 12px;
-  background: url(../images/breadcrumbs/breadcrumbs-home.svg) no-repeat 50% 50%;
-  background-size: cover;
+  padding-right: 28px;
+  box-sizing: content-box;
 }
 
-.breadcrumbs-item:not(:last-child) {
+.breadcrumbs-link.home {
+  min-width: 12px;
+  min-height: 12px;
+  background: url(../images/breadcrumbs/breadcrumbs-home.svg) no-repeat 0 50%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.breadcrumbs-item {
   position: relative;
-  margin-right: 28px;
 }
 
 .breadcrumbs-item:first-child::after {
   position: absolute;
-  top: -5px;
+  top: 8px;
   left: 22px;
   content: "";
   width: 8px;
