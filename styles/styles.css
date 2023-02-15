@@ -109,7 +109,8 @@ body {
 
 .button {
   min-height: 36px;
-  padding: 8px 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
   font-family: inherit;
   font-weight: 700;
@@ -132,19 +133,27 @@ body {
 }
 
 .button-submit {
+  padding-left: 20px;
+  padding-right: 20px;
+
   background-color: #82B3D3;
 
   cursor: pointer;
 }
 
 .button-reset {
+  padding-left: 20px;
+  padding-right: 20px;
+
   background: none;
 
   cursor: pointer;
-
 }
 
 .button-added {
+  padding-left: 18px;
+  padding-right: 18px;
+
   background-color: #7db54f;
 
   cursor: pointer;
@@ -152,6 +161,7 @@ body {
 
 .button-rating {
   display: block;
+  padding: 9px 22px 8px 23px;
 
   font-weight: 400;
   color: #333333;
@@ -441,7 +451,7 @@ body {
   margin-bottom: 54px;
 }
 
-.hotel-search .button-link {
+.hotel-search .button {
   max-width: 375px;
   margin-right: auto;
   margin-left: auto;
@@ -486,7 +496,7 @@ body {
 
 .subscription-input {
   width: 452px;
-  padding: 14px 0 14px 20px;
+  padding: 14px 20px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -576,7 +586,7 @@ body {
 .main-inner-header {
   width: 1060px;
   margin: 0 auto;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
 }
 
 .hotel-filter-title {
@@ -827,17 +837,16 @@ body {
 /*-- Список гостиниц -- */
 
 .hotel-catalog-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
   margin: 0;
   padding: 0;
-  gap: 20px;
 
   list-style: none;
 }
 
 .hotel-catalog-item {
-  width: 340px;
   padding: 20px;
 
   box-shadow: 0 0 0 1px #e6e6e6;
@@ -849,7 +858,9 @@ body {
 }
 
 .hotel-card-image {
-  vertical-align: middle;
+  display: block;
+  object-fit: cover;
+  width: 100%;
 }
 
 .hotel-card-title {
@@ -869,8 +880,8 @@ body {
   row-gap: 16px;
 }
 
-.hotel-card-about .button {
-  width: 140px;
+.hotel-card-about .hotel-price {
+  justify-self: end;
 }
 
 .hotel-type, .hotel-price {
@@ -880,9 +891,6 @@ body {
   color: #333333;
 }
 
-.hotel-price {
-  text-align: end;
-}
 
 /*-- Звезды -- */
 
@@ -943,6 +951,7 @@ body {
   justify-content: center;
   min-width: 60px;
   height: 60px;
+  padding: 0 5px;
 
   font-weight: 700;
   font-size: 20px;
