@@ -320,7 +320,7 @@ body {
 }
 
 .advantages .info-desc {
-  margin-bottom: 69px;
+  margin-bottom: 90px;
 }
 
 .services .info-desc {
@@ -599,6 +599,7 @@ body {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -876,8 +877,7 @@ body {
 .hotel-card-about {
   display: grid;
   grid-template-columns: repeat(2, 140px);
-  column-gap: 20px;
-  row-gap: 16px;
+  gap: 16px 20px;
 }
 
 .hotel-card-about .hotel-price {
