@@ -108,7 +108,6 @@ body {
 /*-- Кнопки -- */
 
 .button {
-  min-height: 36px;
   padding-top: 8px;
   padding-bottom: 8px;
 
@@ -373,7 +372,7 @@ body {
 
 .advantages-item {
   width: 400px;
-  padding: 112px 85px;
+  padding: 113px 85px 112px;
 
   background-color: rgba(131, 179, 211, 0.12);
 }
@@ -848,6 +847,11 @@ body {
 }
 
 .hotel-catalog-item {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  gap: 16px 20px;
   padding: 20px;
 
   box-shadow: 0 0 0 1px #e6e6e6;
@@ -855,6 +859,7 @@ body {
 }
 
 .hotel-card-link {
+  grid-column: 1 / -1;
   text-decoration: none;
 }
 
@@ -874,13 +879,7 @@ body {
   color: #000000;
 }
 
-.hotel-card-about {
-  display: grid;
-  grid-template-columns: repeat(2, 140px);
-  gap: 16px 20px;
-}
-
-.hotel-card-about .hotel-price {
+.hotel-price {
   justify-self: end;
 }
 
