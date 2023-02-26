@@ -756,26 +756,22 @@ body {
 }
 
 .breadcrumbs-item {
-  position: relative;
-
-  margin-right: 27px;
+  display: flex;
 }
 
 .breadcrumbs-item:not(:last-child)::after {
-  position: absolute;
-  top: -1px;
-  left: 22px;
-
   content: "";
-  width: 8px;
+  width: 28px;
   height: 20px;
 
-  background: url(../images/breadcrumbs/breadcrumbs-slider.svg) no-repeat;
+  background: url(../images/breadcrumbs/breadcrumbs-slider.svg) no-repeat center 1px;
 }
 
 .breadcrumbs-link {
   display: block;
-  box-sizing: content-box;
+
+  color: #ffffff;
+  text-decoration: none;
 
   user-select: none;
 }
@@ -789,13 +785,24 @@ body {
 }
 
 .breadcrumbs-link.home {
-  min-width: 13px;
-  min-height: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
-
-  background: url(../images/breadcrumbs/breadcrumbs-home.svg) no-repeat 0 50%;
 }
+
+.breadcrumbs-home {
+  display: block;
+
+  fill: #ffffff;
+}
+
+.breadcrumbs-home:hover {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-home:active {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
 
 
 .hotel-filter-form {
@@ -1081,7 +1088,7 @@ body {
 
 .hotel-card-title {
   margin-top: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 0;
 
   font-weight: 700;
   font-size: 24px;
