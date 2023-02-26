@@ -1148,6 +1148,8 @@ body {
 /*-- Пагинация -- */
 
 .pagination-list {
+  position: relative;
+
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -1155,6 +1157,16 @@ body {
   padding: 0;
 
   list-style: none;
+}
+
+.pagination-list::before {
+  position: absolute;
+  top: -40px;
+
+  content: "";
+  width: 100%;
+
+  border-top: 1px solid #e6e6e6;
 }
 
 .pagination-item:not(:last-child) {
