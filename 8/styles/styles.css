@@ -268,7 +268,7 @@ body {
 
 .navigation {
   display: flex;
-  margin-left: 184px;
+  margin-left: 168px;
 }
 
 .navigation-list {
@@ -285,10 +285,6 @@ body {
 .navigation-user {
   max-width: 312px;
   margin-left: auto;
-}
-
-.navigation-list:first-child .navigation-item:not(:nth-child(3n)) {
-  margin-right: 32px;
 }
 
 .navigation-user .navigation-item:last-child {
@@ -308,8 +304,32 @@ body {
 }
 
 .navigation-list:first-child .navigation-link {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 16px;
+}
+
+.navigation-list:first-child .navigation-link:not(.current-link):hover {
+  color: #756157;
+}
+
+.navigation-list:first-child .navigation-link:not(.current-link):focus {
+  color: #756157;
+}
+
+.navigation-list:first-child .navigation-link:not(.current-link):active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.current-link::before {
+  position: absolute;
+
+  bottom: -1px;
+  z-index: 1;
+
+  content: "";
+  width: calc(100% - 32px);
+  height: 2px;
+
+  background-color: #756257;
 }
 
 .search, .favorites {
@@ -318,14 +338,42 @@ body {
   padding: 22px 12px;
 }
 
-.search {
-  background: url(../images/nav-search.svg) no-repeat 50% 50%;
+.search-icon {
+  display: flex;
+  fill: #000000;
+}
+
+.search-icon:hover {
+  fill: #756157;
+}
+
+.search-icon:focus {
+  fill: #756157;
+}
+
+.search-icon:active {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .favorites {
   position: relative;
+}
 
-  background: url(../images/nav-heart.svg) no-repeat 50% 50%;
+.favorites-icon {
+  display: flex;
+  fill: #000000;
+}
+
+.favorites-icon:hover {
+  fill: #756157;
+}
+
+.favorites-icon:focus {
+  fill: #756157;
+}
+
+.favorites-icon:active {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .navigation .button {
@@ -352,17 +400,7 @@ body {
   border-radius: 50%;
 }
 
-.current-link::before {
-  position: absolute;
-  bottom: -1px;
-  z-index: 1;
 
-  content: "";
-  width: 100%;
-  height: 2px;
-
-  background-color: #756257;
-}
 
 
 /*-- Заглавный блок -- */
@@ -872,7 +910,7 @@ body {
 .range-input {
   width: 143px;
   height: 48px;
-  padding: 12px 45px 12px 20px;
+  padding: 12px 50px 12px 20px;
 
   font: inherit;
   font-weight: 700;
@@ -967,7 +1005,7 @@ body {
 
 .select-control {
   min-width: 292px;
-  padding: 14px 0 14px 20px;
+  padding: 14px 50px 14px 20px;
   margin-right: 70px;
 
   font: inherit;
