@@ -343,20 +343,16 @@ body {
   fill: #000000;
 }
 
-.search-icon:hover {
+.search:hover .search-icon {
   fill: #756157;
 }
 
-.search-icon:focus {
+.search:focus .search-icon {
   fill: #756157;
 }
 
-.search-icon:active {
+.search:active .search-icon {
   fill: rgba(117, 97, 87, 0.3);
-}
-
-.favorites {
-  position: relative;
 }
 
 .favorites-icon {
@@ -364,15 +360,15 @@ body {
   fill: #000000;
 }
 
-.favorites-icon:hover {
+.favorites:hover .favorites-icon {
   fill: #756157;
 }
 
-.favorites-icon:focus {
+.favorites:focus .favorites-icon {
   fill: #756157;
 }
 
-.favorites-icon:active {
+.favorites:active .favorites-icon {
   fill: rgba(117, 97, 87, 0.3);
 }
 
@@ -698,15 +694,15 @@ body {
   fill: #83b3d3;
 }
 
-.social-link-img:hover {
+.social-link:hover .social-link-img {
   fill: #68a2ca;
 }
 
-.social-link-img:focus {
+.social-link:focus .social-link-img {
   fill: #68a2ca;
 }
 
-.social-link-img:active {
+.social-link:active .social-link-img {
   fill: rgba(104, 162, 202, 0.3);
 }
 
@@ -732,27 +728,28 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
+.footer-copyright-link {
+  display: block;
+}
+
 .footer-copyright-img {
   display: block;
 
   fill: #000000;
 }
 
-.footer-copyright-img:hover {
+.footer-copyright-link:hover .footer-copyright-img {
   fill: #756157;
 }
 
-.footer-copyright-img:focus {
+.footer-copyright-link:focus .footer-copyright-img {
   fill: #756157;
 }
 
-.footer-copyright-img:active {
+.footer-copyright-link:active .footer-copyright-img {
   fill: rgba(117, 97, 87, 0.3);
 }
 
-.footer-copyright-link {
-  display: block;
-}
 
 /*-- Фильтрация отелей -- */
 
@@ -814,30 +811,30 @@ body {
   user-select: none;
 }
 
-.breadcrumbs-link:hover {
+.breadcrumbs-item:not(:last-of-type) .breadcrumbs-link:hover {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.breadcrumbs-link:active {
+.breadcrumbs-item:not(:last-of-type) .breadcrumbs-link:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.breadcrumbs-link.home {
+.breadcrumbs-home {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-.breadcrumbs-home {
+.breadcrumbs-home-icon {
   display: block;
 
   fill: #ffffff;
 }
 
-.breadcrumbs-home:hover {
+.breadcrumbs-home:hover .breadcrumbs-home-icon {
   fill: rgba(255, 255, 255, 0.6);
 }
 
-.breadcrumbs-home:active {
+.breadcrumbs-home:active .breadcrumbs-home-icon {
   fill: rgba(255, 255, 255, 0.3);
 }
 
@@ -851,7 +848,8 @@ body {
   margin: 0 auto;
 }
 
-.hotel-filter-group-start, .hotel-filter-group-end {
+.hotel-filter-group-start,
+.hotel-filter-group-end {
   display: flex;
   gap: 70px;
 }
@@ -1116,7 +1114,7 @@ body {
   text-decoration: none;
 }
 
-.hotel-catalog-item .hotel-type, .hotel-price, .button, .hotel-stars {
+.hotel-catalog-item *:not(:first-child) {
   align-self: center;
 }
 
@@ -1171,18 +1169,18 @@ body {
 }
 
 .first-class {
-  background: url(../images/star.svg) 0 10px no-repeat,
-  url(../images/star.svg) 24px 10px no-repeat,
-  url(../images/star.svg) 48px 10px no-repeat,
-  url(../images/star.svg) 72px 10px no-repeat;
+  background: url(../images/star.svg) no-repeat 0 10px,
+  url(../images/star.svg) no-repeat 24px 10px,
+  url(../images/star.svg) no-repeat 48px 10px,
+  url(../images/star.svg) no-repeat 72px 10px;
 }
 
 .luxury {
-  background: url(../images/star.svg) 0 10px no-repeat,
-  url(../images/star.svg) 24px 10px no-repeat,
-  url(../images/star.svg) 48px 10px no-repeat,
-  url(../images/star.svg) 72px 10px no-repeat,
-  url(../images/star.svg) 96px 10px no-repeat;
+  background: url(../images/star.svg) no-repeat 0 10px,
+  url(../images/star.svg) no-repeat 24px 10px,
+  url(../images/star.svg) no-repeat 48px 10px,
+  url(../images/star.svg) no-repeat 72px 10px,
+  url(../images/star.svg) no-repeat 96px 10px;
 }
 
 /*-- Пагинация -- */

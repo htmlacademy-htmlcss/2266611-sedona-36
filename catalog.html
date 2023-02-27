@@ -59,15 +59,15 @@
           <h1 class="hotel-filter-title">Гостиницы Седоны</h1>
           <ol class="breadcrumbs">
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link home" href="index.html">
-                <svg class="breadcrumbs-home" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 13 13">
+              <a class="breadcrumbs-link breadcrumbs-home" href="index.html">
+                <svg class="breadcrumbs-home-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 13 13">
                   <path d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z"/><path d="M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z"/>
                 </svg>
                 <span class="visually-hidden">На главную</span>
               </a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link" href="#">Гостиницы</a>
+              <a class="breadcrumbs-link" aria-current="page">Гостиницы</a>
             </li>
           </ol>
         </header>
@@ -131,9 +131,9 @@
             <fieldset class="hotel-filter-group">
               <legend class="hotel-filter-subtitle">Стоимость, ₽:</legend>
               <div class="range-inputs-wrapper">
-                <input class="range-input" type="number" id="min-price" value="0" name="min-price" readonly>
+                <input class="range-input" type="number" id="min-price" value="0" name="min-price">
                 <label class="min-price-label" for="min-price">от</label>
-                <input class="range-input" type="number" id="max-price" value="9000" name="max-price" readonly>
+                <input class="range-input" type="number" id="max-price" value="9000" name="max-price">
                 <label class="max-price-label" for="max-price">до</label>
               </div>
               <div class="range-scale">
