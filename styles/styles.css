@@ -611,7 +611,7 @@ body {
   box-shadow: 0 0 0 3px #83b3d3 inset;
 }
 
-.subscription-input:active {
+.subscription-input:focus:not(:placeholder-shown) {
   background-color: #f2f2f2;
   box-shadow: 0 0 0 2px #000000 inset;
 }
@@ -872,7 +872,7 @@ body {
 .range-input {
   width: 143px;
   height: 48px;
-  padding: 12px 20px;
+  padding: 12px 45px 12px 20px;
 
   font: inherit;
   font-weight: 700;
@@ -887,6 +887,12 @@ body {
 
 .range-input:last-of-type {
   border-radius: 0 4px 4px 0;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .range-input:hover {
@@ -983,10 +989,6 @@ body {
 
 .select-control:focus {
   box-shadow: 0 0 0 2px #68a2ca inset;
-}
-
-.select-control:active {
-  box-shadow: 0 0 0 2px #3f5e72 inset;
 }
 
 .select-control:disabled {
