@@ -122,6 +122,7 @@ body {
 
   border: none;
   border-radius: 4px;
+  outline: none;
 }
 
 .button:active {
@@ -301,6 +302,8 @@ body {
   line-height: 24px;
   text-decoration: none;
   color: #000000;
+
+  outline: none;
 }
 
 .navigation-list:first-child .navigation-link {
@@ -550,8 +553,9 @@ body {
 
 .advantages-title::after {
   position: absolute;
-  top: 86px;
-  left: 58px;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
 
   content: "";
   width: 60px;
@@ -688,6 +692,8 @@ body {
 .social-link {
   display: flex;
   padding: 10px 13px;
+
+  outline: none;
 }
 
 .social-link-img {
@@ -714,6 +720,8 @@ body {
   font-style: normal;
   text-decoration: none;
   color: #000000;
+
+  outline: none;
 }
 
 .phone-link:hover {
@@ -730,6 +738,8 @@ body {
 
 .footer-copyright-link {
   display: block;
+
+  outline: none;
 }
 
 .footer-copyright-img {
@@ -791,15 +801,22 @@ body {
 }
 
 .breadcrumbs-item {
-  display: flex;
+  position: relative;
+
+  margin-right: 28px;
 }
 
 .breadcrumbs-item:not(:last-child)::after {
-  content: "";
-  width: 28px;
-  height: 20px;
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
 
-  background: url(../images/breadcrumbs/breadcrumbs-slider.svg) no-repeat center 1px;
+  content: "";
+  width: 8px;
+  height: 11px;
+
+  background: url(../images/breadcrumbs/breadcrumbs-slider.svg) no-repeat;
 }
 
 .breadcrumbs-link {
@@ -809,9 +826,14 @@ body {
   text-decoration: none;
 
   user-select: none;
+  outline: none;
 }
 
 .breadcrumbs-item:not(:last-of-type) .breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-item:not(:last-of-type) .breadcrumbs-link:focus {
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -820,22 +842,20 @@ body {
 }
 
 .breadcrumbs-home {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.breadcrumbs-home-icon {
   display: block;
+  min-width: 13px;
+  min-height: 13px;
 
-  fill: #ffffff;
+  background: url(../images/breadcrumbs/breadcrumbs-home.svg) no-repeat 50% 50%;
 }
 
-.breadcrumbs-home:hover .breadcrumbs-home-icon {
-  fill: rgba(255, 255, 255, 0.6);
+.breadcrumbs-home:hover,
+.breadcrumbs-home:focus {
+  opacity: 60%;
 }
 
-.breadcrumbs-home:active .breadcrumbs-home-icon {
-  fill: rgba(255, 255, 255, 0.3);
+.breadcrumbs-home:active {
+  opacity: 30%;
 }
 
 
@@ -1225,23 +1245,26 @@ body {
   text-decoration: none;
 
   border-radius: 4px;
+  outline: none;
 }
 
-.pagination-active {
+.pagination-valid {
   color: #ffffff;
 
   background-color: #82b3d3;
 }
 
-.pagination-active:hover {
+.pagination-valid:hover {
   background-color: #68a2ca;
+  box-shadow: 0 0 0 1px #82b3d3 inset;
 }
 
-.pagination-active:focus {
+.pagination-valid:focus {
   background-color: #68a2ca;
+  box-shadow: 0 0 0 1px #82b3d3 inset;
 }
 
-.pagination-active:active {
+.pagination-valid:active {
   color: rgba(255, 255, 255, 0.3);
 
   background-color: #82b3d3;
@@ -1260,4 +1283,8 @@ body {
   color: #000000;
 
   background: none;
+}
+
+.pagination-next:focus {
+  box-shadow: 0 0 0 1px #82b3d3 inset;
 }
