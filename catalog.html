@@ -128,10 +128,14 @@
             <fieldset class="hotel-filter-group">
               <legend class="hotel-filter-subtitle">Стоимость, ₽:</legend>
               <div class="range-inputs-wrapper">
-                <input class="range-input" type="number" id="min-price" value="0" name="min-price">
-                <label class="min-price-label" for="min-price">от</label>
-                <input class="range-input" type="number" id="max-price" value="9000" name="max-price">
-                <label class="max-price-label" for="max-price">до</label>
+                <label class="price-label">
+                  <input class="range-input range-input-from" type="number" value="0" name="min-price">
+                  <span class="min-price-label">от</span>
+                </label>
+                <label class="price-label">
+                  <input class="range-input range-input-to" type="number" value="9000" name="max-price">
+                  <span class="max-price-label">до</span>
+                </label>
               </div>
               <div class="range-scale">
                 <div class="range-bar">

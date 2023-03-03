@@ -201,8 +201,6 @@ body {
 }
 
 .button-reset:focus {
-  color: #ffffff;
-
   box-shadow: 0 0 0 3px #83b3d3 inset;
 }
 
@@ -420,6 +418,7 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 1;
 
   content: "";
   width: 100%;
@@ -652,6 +651,26 @@ body {
 .subscription-input:focus:not(:placeholder-shown) {
   background-color: #f2f2f2;
   box-shadow: 0 0 0 2px #000000 inset;
+}
+
+.subscription-input:disabled {
+  background-color: #f4f3f3;
+}
+
+.subscription-input:disabled::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.subscription-input:disabled::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.subscription-input:disabled:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.subscription-input:disabled:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.1);
 }
 
 .subscription-form .button {
@@ -918,8 +937,6 @@ body {
 }
 
 .range-inputs-wrapper {
-  position: relative;
-
   display: flex;
   justify-content: space-between;
   width: 288px;
@@ -937,11 +954,14 @@ body {
 
   background-color: #f2f2f2;
   border: none;
-  border-radius: 4px 0 0 4px;
   outline: none;
 }
 
-.range-input:last-of-type {
+.range-input-from {
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input-to {
   border-radius: 0 4px 4px 0;
 }
 
@@ -960,24 +980,25 @@ body {
   box-shadow: 0 0 0 3px #83b3d3 inset;
 }
 
-.range-input:active {
-  background-color: #f2f2f2;
-  box-shadow: 0 0 0 2px #000000 inset;
+.range-input:disabled {
+  background-color: #a4a4a4;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.price-label {
+  position: relative;
 }
 
 .min-price-label, .max-price-label {
   position: absolute;
-  top: 12px;
-  left: 106px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
 
   font: inherit;
   font-size: 18px;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.3);
-}
-
-.max-price-label {
-  left: 248px;
 }
 
 .hotel-filter-buttons {
@@ -1132,6 +1153,11 @@ body {
 .hotel-card-link {
   grid-column: 1 / -1;
   text-decoration: none;
+}
+
+.hotel-card-link:focus-visible {
+  box-shadow: 0 0 0 2px #68a2ca;
+  outline: none;
 }
 
 .hotel-catalog-item *:not(:first-child) {
