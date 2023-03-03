@@ -940,6 +940,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 288px;
+  margin-bottom: 44px;
 }
 
 .range-input {
@@ -999,6 +1000,55 @@ body {
   font-size: 18px;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.range-scale {
+  position: relative;
+
+  height: 4px;
+
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  z-index: 1;
+
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.range-toggle:focus {
+  box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
+}
+
+.range-toggle:active {
+  box-shadow: 0 0 0 2px #83b3d3;
+}
+
+.toggle-min {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.toggle-max {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .hotel-filter-buttons {
