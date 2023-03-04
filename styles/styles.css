@@ -948,15 +948,11 @@ body {
   height: 20px;
   background-color: #ffffff;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .control:hover .control-mark {
   opacity: 60%;
-}
-
-.control-input:focus,
-.control-input:focus-visible {
-  outline: none;
 }
 
 .control:focus-within .control-mark {
@@ -971,6 +967,7 @@ body {
 .control-input:disabled:hover + .control-mark {
   background-color: #868686;
   opacity: 1;
+  cursor: default;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::after {
