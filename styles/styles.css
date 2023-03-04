@@ -917,16 +917,16 @@ body {
   line-height: 24px;
 }
 
-.hotel-filter-item:not(:last-child) {
-  margin-bottom: 16px;
-}
-
 .hotel-filter-list {
   margin: 0;
   padding: 0;
 
   list-style: none;
   line-height: 23px;
+}
+
+.hotel-filter-item:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .control {
@@ -948,18 +948,18 @@ body {
   height: 20px;
   background-color: #ffffff;
   border-radius: 4px;
-  cursor: pointer;
 }
 
-.control:hover .control-mark {
+.control:hover {
   opacity: 60%;
+  cursor: pointer;
 }
 
 .control:focus-within .control-mark {
   outline: #83b3d3 solid 3px;
 }
 
-.control:active .control-mark {
+.control:active {
   opacity: 30%;
 }
 
