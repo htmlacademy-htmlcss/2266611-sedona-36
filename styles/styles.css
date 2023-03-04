@@ -930,10 +930,67 @@ body {
 }
 
 .control {
+  position: relative;
+
   display: block;
   padding-left: 36px;
 
   font-size: 18px;
+}
+
+.control-mark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.control:hover .control-mark {
+  opacity: 60%;
+}
+
+.control:focus .control-mark {
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.control:active .control-mark {
+  opacity: 30%;
+}
+
+.control-input:disabled + .control-mark,
+.control-input:disabled:hover + .control-mark {
+  background-color: #868686;
+  opacity: 1;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../images/tick-checkbox.svg) no-repeat;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::after {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3f5e72;
 }
 
 .range-inputs-wrapper {
@@ -1037,6 +1094,13 @@ body {
 
 .range-toggle:active {
   box-shadow: 0 0 0 2px #83b3d3;
+}
+
+.range-toggle:disabled,
+.range-toggle:disabled:active {
+  background-color: #868686;
+  box-shadow: none;
+  cursor: default;
 }
 
 .toggle-min {
