@@ -954,9 +954,13 @@ body {
   opacity: 60%;
 }
 
-.control:focus .control-mark {
-  box-shadow: 0 0 0 3px #83b3d3;
+.control-input:focus,
+.control-input:focus-visible {
   outline: none;
+}
+
+.control:focus-within .control-mark {
+  outline: #83b3d3 solid 3px;
 }
 
 .control:active .control-mark {
