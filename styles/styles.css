@@ -956,6 +956,7 @@ body {
 
 .control:focus .control-mark {
   box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
 }
 
 .control:active .control-mark {
