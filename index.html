@@ -172,7 +172,40 @@
     </footer>
     <!-- Модальное окно -->
     <div class="modal-container">
-
+      <div class="modal-search">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть.</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
+            <h3 class="visually-hidden">Укажите дату заезда и дату выезда, а также количество взрослых и детей.</h3>
+            <label class="modal-form-label" for="arrival-date">Дата Заезда:</label>
+            <div class="date-wrapper">
+              <input class="modal-input input-date" type="text" name="arrival-date" id="arrival-date" value="27 апреля 2020" placeholder="Укажите дату">
+              <span class="date-state date-invalid shown">Мы не можем отправить вас в прошлое.</span>
+            </div>
+            <label class="modal-form-label" for="departure-date">Дата Выезда:</label>
+            <div class="date-wrapper">
+              <input class="modal-input input-date" type="text" name="departure-date" id="departure-date" value="1 сентября 2023" placeholder="Укажите дату">
+              <span class="date-state shown">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
+            <label class="modal-form-label" for="adult-guests">Взрослые:</label>
+            <div class="age-range-wrapper">
+              <button class="modal-range-button minus" type="button"></button>
+              <input class="modal-input" type="number" name="adult-guests" id="adult-guests" value="2">
+              <button class="modal-range-button plus" type="button"></button>
+            </div>
+            <label class="modal-form-label kids-label" for="kids-guests">Дети:</label>
+            <div class="age-range-wrapper">
+              <button class="modal-range-button minus" type="button"></button>
+              <input class="modal-input" type="number" name="kids-guest" id="kids-guests" value="2">
+              <button class="modal-range-button plus" type="button"></button>
+            </div>
+            <button class="button button-submit" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
   </div>
   </body>
