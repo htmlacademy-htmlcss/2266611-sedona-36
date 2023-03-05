@@ -200,7 +200,7 @@ body {
   opacity: 60%;
 }
 
-.button-reset:focus {
+.button-reset:focus-visible {
   box-shadow: 0 0 0 3px #83b3d3 inset;
 }
 
@@ -963,7 +963,7 @@ body {
   cursor: pointer;
 }
 
-.control:focus-within .control-mark {
+.control-input:focus-visible + .control-mark {
   outline: #83b3d3 solid 3px;
 }
 
@@ -1049,9 +1049,10 @@ body {
   background-color: #e6e6e6;
 }
 
-.range-input:focus {
+.range-input:focus-visible {
   background-color: #e6e6e6;
   box-shadow: 0 0 0 3px #83b3d3 inset;
+  outline: none;
 }
 
 .range-input:disabled {
@@ -1111,7 +1112,7 @@ body {
   background-color: #e6e6e6;
 }
 
-.range-toggle:focus {
+.range-toggle:focus-visible {
   box-shadow: 0 0 0 3px #83b3d3;
   outline: none;
 }
@@ -1432,7 +1433,7 @@ body {
   box-shadow: 0 0 0 1px #82b3d3 inset;
 }
 
-.pagination-valid:focus {
+.pagination-valid:focus-visible {
   background-color: #68a2ca;
   box-shadow: 0 0 0 1px #82b3d3 inset;
 }
@@ -1458,7 +1459,7 @@ body {
   background: none;
 }
 
-.pagination-next:focus {
+.pagination-next:focus-visible {
   box-shadow: 0 0 0 1px #82b3d3 inset;
 }
 
@@ -1621,7 +1622,7 @@ body {
   box-shadow: 0 0 0 3px #83b3d3 inset;
 }
 
-.modal-input:focus:not(:placeholder-shown) {
+.input-date:focus:not(:placeholder-shown) {
   background-color: #f2f2f2;
   box-shadow: 0 0 0 2px #000000 inset;
 }
@@ -1714,12 +1715,21 @@ body {
   filter: none;
 }
 
+.modal-range-button.minus:focus-visible::after {
+  filter: none;
+}
+
 .modal-range-button.minus:active::after {
   filter: invert(75%);
 }
 
 .modal-range-button.plus:hover::before,
 .modal-range-button.plus:hover::after {
+  filter: none;
+}
+
+.modal-range-button.plus:focus-visible::before,
+.modal-range-button.plus:focus-visible:after {
   filter: none;
 }
 
