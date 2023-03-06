@@ -1478,6 +1478,10 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
+.modal-container-close {
+  display: none;
+}
+
 .modal-search {
   position: relative;
 
@@ -1712,6 +1716,10 @@ body {
   outline: #83b3d3 solid 3px;
 }
 
+.modal-range-button:disabled {
+  cursor: default;
+}
+
 .modal-range-button.minus:hover::after {
   filter: none;
 }
@@ -1721,6 +1729,10 @@ body {
 }
 
 .modal-range-button.minus:active::after {
+  filter: invert(75%);
+}
+
+.modal-range-button.minus:disabled::after {
   filter: invert(75%);
 }
 
@@ -1739,6 +1751,11 @@ body {
   filter: invert(75%);
 }
 
+.modal-range-button.plus:disabled::before,
+.modal-range-button.plus:disabled::after {
+  filter: invert(75%);
+}
+
 .modal-input[type="number"] {
   width: 31px;
   padding: 14px 10px;
@@ -1747,8 +1764,8 @@ body {
   line-height: 20px;
 }
 
-.modal-input::-webkit-outer-spin-button,
-.modal-input::-webkit-inner-spin-button {
+.modal-input[type="number"]::-webkit-outer-spin-button,
+.modal-input[type="number"]::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
