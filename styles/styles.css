@@ -353,7 +353,8 @@ body {
   background-color: #756257;
 }
 
-.search, .favorites {
+.search,
+.favorites {
   min-width: 44px;
   min-height: 64px;
   padding: 22px 12px;
@@ -426,6 +427,7 @@ body {
 .hero {
   position: relative;
 
+  min-height: 485px;
   padding: 51px 70px 82px;
 
   text-align: center;
@@ -454,7 +456,8 @@ body {
 
 /*-- Преимущества и сервис -- */
 
-.advantages, .services {
+.advantages,
+.services {
   text-align: center;
 }
 
@@ -567,7 +570,8 @@ body {
   margin-bottom: 30px;
 }
 
-.advantages-desc, .services-desc {
+.advantages-desc,
+.services-desc {
   margin: 0;
 }
 
@@ -604,7 +608,7 @@ body {
 }
 
 .hotel-search .button {
-  max-width: 376px;
+  width: 376px;
   margin-right: auto;
   margin-left: auto;
 
@@ -1076,7 +1080,8 @@ body {
   position: relative;
 }
 
-.min-price-label, .max-price-label {
+.min-price-label,
+.max-price-label {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1354,7 +1359,8 @@ body {
   justify-self: end;
 }
 
-.hotel-type, .hotel-price {
+.hotel-type,
+.hotel-price {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -1514,7 +1520,6 @@ body {
   border-radius: 30px;
   box-shadow: 0 25px 50px rgb(0, 0, 0, 0.15);
 }
-
 
 .modal-close-button {
   position: absolute;
@@ -1691,91 +1696,52 @@ body {
 .modal-range-button {
   position: relative;
 
-  width: 20px;
-  height: 20px;
-  padding: 0;
+  padding: 14px 10px;
 
   border: none;
   border-radius: 5px;
   background: none;
 }
 
-.modal-range-button.minus::after {
-  position: absolute;
-  content: "";
-  transform: translateX(-50%) translateY(-50%);
-
-  width: 14px;
-  height: 2px;
-  background-color: #000000;
-  filter: invert(75%);
-}
-
-.modal-range-button.plus::before,
-.modal-range-button.plus::after {
-  position: absolute;
-  content: "";
-
-  width: 14px;
-  height: 2px;
-  background-color: #000000;
-  filter: invert(75%);
-}
-
-.modal-range-button.plus::before {
-  transform: translateX(-50%) translateY(-50%) rotate(90deg);
-}
-
-.modal-range-button.plus::after {
-  transform: translateX(-50%) translateY(-50%);
+.button-plus-minus {
+  display: flex;
+  fill: #756157;
+  opacity: 30%;
 }
 
 .modal-range-button:hover {
   cursor: pointer;
 }
 
+.modal-range-button:hover .button-plus-minus {
+  fill: #000000;
+  opacity: 1;
+}
+
 .modal-range-button:focus-visible {
+  outline: none;
+}
+
+.modal-range-button:focus-visible .button-plus-minus {
+  fill: #000000;
+  opacity: 1;
+
   outline: #83b3d3 solid 3px;
+  border-radius: 4px;
+}
+
+.modal-range-button:active .button-plus-minus {
+  fill: #000000;
+  opacity: 30%;
 }
 
 .modal-range-button:disabled {
   cursor: default;
 }
 
-.modal-range-button.minus:hover::after {
-  filter: none;
-}
-
-.modal-range-button.minus:focus-visible::after {
-  filter: none;
-}
-
-.modal-range-button.minus:active::after {
-  filter: invert(75%);
-}
-
-.modal-range-button.minus:disabled::after {
-  filter: invert(75%);
-}
-
-.modal-range-button.plus:hover::before,
-.modal-range-button.plus:hover::after {
-  filter: none;
-}
-
-.modal-range-button.plus:focus-visible::before,
-.modal-range-button.plus:focus-visible:after {
-  filter: none;
-}
-
-.modal-range-button.plus:active::before,
-.modal-range-button.plus:active::after {
-  filter: invert(75%);
-}
-
-.modal-range-button.plus:disabled::before,
-.modal-range-button.plus:disabled::after {
-  filter: invert(75%);
+.modal-range-button:disabled .button-plus-minus {
+  fill: #000000;
+  opacity: 20%;
 }
 
 .modal-input[type="number"] {
