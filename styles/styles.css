@@ -109,6 +109,7 @@ body {
 
 .button {
   padding: 8px 10px;
+  margin: 0;
 
   font-family: inherit;
   font-weight: 700;
@@ -180,6 +181,7 @@ body {
 
 .button-reset {
   padding: 8px 10px;
+  margin: 0;
 
   font-family: inherit;
   font-weight: 700;
@@ -424,7 +426,7 @@ body {
 .hero {
   position: relative;
 
-  padding: 51px 0 82px;
+  padding: 51px 70px 82px;
 
   text-align: center;
 
@@ -682,7 +684,7 @@ body {
 }
 
 .subscription-form .button {
-  min-width: 232px;
+  width: 232px;
 
   font-size: 20px;
   line-height: 36px;
@@ -708,7 +710,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
 
-  max-width: 150px;
+  max-width: 160px;
   min-height: 40px;
   margin: 0;
   padding: 0;
@@ -741,6 +743,7 @@ body {
 
 .phone-link {
   display: block;
+  max-width: 350px;
 
   font-size: 40px;
   line-height: 40px;
@@ -915,20 +918,28 @@ body {
 }
 
 .hotel-filter-subtitle {
+  max-width: 165px;
   margin-bottom: 32px;
   padding: 0;
 
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  word-wrap: break-word;
+}
+
+.filter-price-subtitle {
+  width: 280px;
 }
 
 .hotel-filter-list {
   margin: 0;
   padding: 0;
+  max-width: 165px;
 
   list-style: none;
   line-height: 23px;
+  word-wrap: break-word;
 }
 
 .hotel-filter-item:not(:last-child) {
@@ -1029,6 +1040,7 @@ body {
   background-color: #f2f2f2;
   border: none;
   outline: none;
+  -moz-appearance: textfield;
 }
 
 .range-input-from {
@@ -1147,7 +1159,8 @@ body {
   justify-content: flex-end;
 }
 
-.hotel-filter-buttons .button {
+.hotel-filter-buttons .button,
+.hotel-filter-buttons .button-reset {
   width: 191px;
 }
 
@@ -1165,6 +1178,8 @@ body {
 }
 
 .catalog-hotel-search {
+  max-width: 400px;
+
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -1180,10 +1195,12 @@ body {
 
 .catalog-options {
   display: flex;
+  align-items: center;
 }
 
 .select-control {
-  min-width: 292px;
+  width: 292px;
+  height: 49px;
   padding: 14px 50px 14px 20px;
   margin-right: 70px;
 
@@ -1218,14 +1235,19 @@ body {
 .catalog-view-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 160px;
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
-.catalog-view-item:not(:last-child) {
+.catalog-view-item:not(:nth-child(3n)) {
   margin-right: 8px;
+}
+
+.catalog-view-item:nth-child(n+4) {
+  margin-top: 8px;
 }
 
 .button-view-mode {
@@ -1762,6 +1784,7 @@ body {
 
   text-align: center;
   line-height: 20px;
+  -moz-appearance: textfield;
 }
 
 .modal-input[type="number"]::-webkit-outer-spin-button,
