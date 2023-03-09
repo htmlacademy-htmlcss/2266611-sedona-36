@@ -683,6 +683,7 @@ body {
 
 .subscription-input:disabled::placeholder {
   color: rgba(0, 0, 0, 0.1);
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -859,6 +860,7 @@ body {
   color: #ffffff;
   text-decoration: none;
 
+  -webkit-user-select: none;
   user-select: none;
   outline: none;
 }
@@ -961,6 +963,7 @@ body {
 
   font-size: 18px;
 
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -1060,6 +1063,7 @@ body {
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
@@ -1095,6 +1099,7 @@ body {
   line-height: 24px;
   color: rgba(0, 0, 0, 0.3);
 
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -1222,6 +1227,7 @@ body {
   border: none;
   border-radius: 4px;
   background: url(../images/select.svg) no-repeat center right 20px;
+  -webkit-appearance: none;
   appearance: none;
   outline: none;
 }
@@ -1678,6 +1684,7 @@ body {
 
 .modal-input:disabled::placeholder {
   color: rgba(0, 0, 0, 0.1);
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -1768,6 +1775,7 @@ body {
 
 .modal-input[type="number"]::-webkit-outer-spin-button,
 .modal-input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
