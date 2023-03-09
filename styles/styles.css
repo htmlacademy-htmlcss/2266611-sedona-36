@@ -420,8 +420,6 @@ body {
 }
 
 
-
-
 /*-- Заглавный блок -- */
 
 .hero {
@@ -453,6 +451,7 @@ body {
 .welcome-text {
   vertical-align: middle;
 }
+
 
 /*-- Преимущества и сервис -- */
 
@@ -695,6 +694,7 @@ body {
 
   border-radius: 0 4px 4px 0;
 }
+
 
 /*-- Подвал -- */
 
@@ -1176,6 +1176,7 @@ body {
   margin-bottom: 32px;
 }
 
+
 /*-- Настройки отображения -- */
 
 .catalog {
@@ -1408,6 +1409,7 @@ body {
   url(../images/star.svg) no-repeat 96px 10px;
 }
 
+
 /*-- Пагинация -- */
 
 .pagination-list {
@@ -1493,6 +1495,7 @@ body {
 .pagination-next:focus-visible {
   box-shadow: 0 0 0 1px #82b3d3 inset;
 }
+
 
 /*-- Модальное окно -- */
 
