@@ -1547,28 +1547,16 @@ body {
 
   width: 52px;
   height: 52px;
+  padding: 0;
 
   border: none;
   border-radius: 50%;
   background-color: #f2f2f2;
 }
 
-.modal-close-button::before,
-.modal-close-button::after {
+.modal-close-image {
   position: absolute;
-
-  content: "";
-  width: 16px;
-  height: 2px;
-  background-color: #000000;
-}
-
-.modal-close-button::before {
-  transform: translateX(-50%) translateY(-50%) rotate(45deg) ;
-}
-
-.modal-close-button::after {
-  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .modal-close-button:hover {
@@ -1585,9 +1573,8 @@ body {
   background-color: #e6e6e6;
 }
 
-.modal-close-button:active::before,
-.modal-close-button:active::after {
-  filter: invert(60%);
+.modal-close-button:active svg {
+  opacity: 30%;
 }
 
 .modal-content {
