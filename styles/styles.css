@@ -1169,7 +1169,8 @@ body {
 .hotel-filter-buttons {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  padding-top: 56px;
 }
 
 .hotel-filter-buttons .button,
