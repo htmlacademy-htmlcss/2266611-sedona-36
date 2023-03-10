@@ -1828,7 +1828,7 @@ body {
   border-radius: 10px;
 }
 
-.tooltip-text:after {
+.tooltip-text::after {
   position: absolute;
   top: -9px;
   left: 50%;
