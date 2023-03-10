@@ -420,8 +420,6 @@ body {
 }
 
 
-
-
 /*-- Заглавный блок -- */
 
 .hero {
@@ -453,6 +451,7 @@ body {
 .welcome-text {
   vertical-align: middle;
 }
+
 
 /*-- Преимущества и сервис -- */
 
@@ -684,6 +683,7 @@ body {
 
 .subscription-input:disabled::placeholder {
   color: rgba(0, 0, 0, 0.1);
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -695,6 +695,7 @@ body {
 
   border-radius: 0 4px 4px 0;
 }
+
 
 /*-- Подвал -- */
 
@@ -859,6 +860,7 @@ body {
   color: #ffffff;
   text-decoration: none;
 
+  -webkit-user-select: none;
   user-select: none;
   outline: none;
 }
@@ -922,7 +924,6 @@ body {
 }
 
 .hotel-filter-subtitle {
-  max-width: 165px;
   margin-bottom: 32px;
   padding: 0;
 
@@ -932,8 +933,12 @@ body {
   word-wrap: break-word;
 }
 
+.filter-option-subtitle {
+  max-width: 165px;
+}
+
 .filter-price-subtitle {
-  width: 280px;
+  max-width: 288px;
 }
 
 .hotel-filter-list {
@@ -958,6 +963,7 @@ body {
 
   font-size: 18px;
 
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -1032,6 +1038,7 @@ body {
 }
 
 .range-input {
+  -moz-appearance: textfield;
   width: 143px;
   height: 48px;
   padding: 12px 50px 12px 20px;
@@ -1044,7 +1051,6 @@ body {
   background-color: #f2f2f2;
   border: none;
   outline: none;
-  -moz-appearance: textfield;
 }
 
 .range-input-from {
@@ -1057,6 +1063,7 @@ body {
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
@@ -1092,6 +1099,7 @@ body {
   line-height: 24px;
   color: rgba(0, 0, 0, 0.3);
 
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -1161,7 +1169,8 @@ body {
 .hotel-filter-buttons {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  padding-top: 56px;
 }
 
 .hotel-filter-buttons .button,
@@ -1172,6 +1181,7 @@ body {
 .hotel-filter-buttons .button-submit {
   margin-bottom: 32px;
 }
+
 
 /*-- Настройки отображения -- */
 
@@ -1218,6 +1228,7 @@ body {
   border: none;
   border-radius: 4px;
   background: url(../images/select.svg) no-repeat center right 20px;
+  -webkit-appearance: none;
   appearance: none;
   outline: none;
 }
@@ -1405,6 +1416,7 @@ body {
   url(../images/star.svg) no-repeat 96px 10px;
 }
 
+
 /*-- Пагинация -- */
 
 .pagination-list {
@@ -1491,6 +1503,7 @@ body {
   box-shadow: 0 0 0 1px #82b3d3 inset;
 }
 
+
 /*-- Модальное окно -- */
 
 .modal-container {
@@ -1513,12 +1526,20 @@ body {
 .modal-search {
   position: relative;
 
+  max-height: 700px;
   margin: auto;
   padding: 64px 70px;
 
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0 25px 50px rgb(0, 0, 0, 0.15);
+
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.modal-search::-webkit-scrollbar {
+  width: 0;
 }
 
 .modal-close-button {
@@ -1528,28 +1549,16 @@ body {
 
   width: 52px;
   height: 52px;
+  padding: 0;
 
   border: none;
   border-radius: 50%;
   background-color: #f2f2f2;
 }
 
-.modal-close-button::before,
-.modal-close-button::after {
+.modal-close-image {
   position: absolute;
-
-  content: "";
-  width: 16px;
-  height: 2px;
-  background-color: #000000;
-}
-
-.modal-close-button::before {
-  transform: translateX(-50%) translateY(-50%) rotate(45deg) ;
-}
-
-.modal-close-button::after {
-  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .modal-close-button:hover {
@@ -1566,9 +1575,8 @@ body {
   background-color: #e6e6e6;
 }
 
-.modal-close-button:active::before,
-.modal-close-button:active::after {
-  filter: invert(60%);
+.modal-close-button:active svg {
+  opacity: 30%;
 }
 
 .modal-content {
@@ -1600,6 +1608,7 @@ body {
 .label-with-tooltip {
   position: relative;
   grid-column: 4 / 5;
+  margin-left: 5px;
 }
 
 .age-range-wrapper:last-of-type {
@@ -1665,6 +1674,7 @@ body {
 
 .modal-input:disabled::placeholder {
   color: rgba(0, 0, 0, 0.1);
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -1745,16 +1755,17 @@ body {
 }
 
 .modal-input[type="number"] {
+  -moz-appearance: textfield;
   width: 31px;
   padding: 14px 4px;
 
   text-align: center;
   line-height: 20px;
-  -moz-appearance: textfield;
 }
 
 .modal-input[type="number"]::-webkit-outer-spin-button,
 .modal-input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
