@@ -1526,6 +1526,7 @@ body {
 .modal-search {
   position: relative;
 
+  min-width: 717px;
   max-height: 700px;
   margin: auto;
   padding: 64px 70px;
