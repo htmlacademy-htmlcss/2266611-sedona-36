@@ -1608,6 +1608,7 @@ body {
 .label-with-tooltip {
   position: relative;
   grid-column: 4 / 5;
+  margin-left: 5px;
 }
 
 .age-range-wrapper:last-of-type {
